@@ -116,9 +116,9 @@ const clean = text => {
     else
         return text;
   }
-
+const config = require("../config.json")
 client.on("message", (message) => {
-    if (message.author.id != "364456580042719253") return;
+    if (message.author.id != config.owner) return;
         const args = message.content.split(" ").slice(1);
        
         if (message.content.startsWith("!eval")) {
@@ -135,5 +135,5 @@ client.on("message", (message) => {
           }
         }
 })
-const config = require("../config.json")
+
   client.login(config.token);
