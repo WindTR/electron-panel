@@ -2,9 +2,7 @@ const { ipcMain, ipcRenderer, BrowserWindow, protocol } = require('electron');
 const electron = require("electron")
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const url = require('url');
 
-let sunucuid = document.querySelector("#guildID");
 var sunucuselect = document.getElementById('sunucular');
 let yenile = document.querySelector("#yenile");
 let test = document.querySelector("#test");
@@ -13,8 +11,6 @@ let yenile2 = document.querySelector("#yenile2")
 let sunucuüye = document.getElementById("sunucularüye")
 let üyeyeinp = document.querySelector("#üyeyeinp")
 let test2 = document.querySelector("#test2")
-let swgonder = document.querySelector("#swgonder")
-let sunucuico = document.getElementById("sunucuico")
 let uyerolver = document.getElementById("uyerolver")
 let yenilerol = document.querySelector("#yenilerol")
 let rolverbtn = document.querySelector("#rolverbtn")
@@ -83,28 +79,28 @@ client.on("ready", () => {
 
 embedsend.addEventListener("click" , () => {
   const embed = new Discord.MessageEmbed()
-  if(!!title.value === true) {
+  if(title.value == true) {
     embed.setTitle(title.value)
   }
-  if(!!author.value === true) {
+  if(!!author.value == true) {
     embed.setAuthor(author.value, author2.value)
   }
-  if(!!color.value === true) {
+  if(!!color.value == true) {
     embed.setColor(color.value)
   }
-  if(!!field.value === true) {
+  if(!!field.value == true) {
     embed.addField(field.value, field2.value)
   }
-  if(!!thumb.value === true) {
+  if(!!thumb.value == true) {
     embed.setThumbnail(thumb.value)
   }
-  if(!!desc.value === true) {
+  if(!!desc.value == true) {
     embed.setDescription(desc.value)
   }
-  if(!!image.value === true) {
+  if(!!image.value == true) {
     embed.setImage(image.value)
   }
-  if(!!footerembed.value === true) {
+  if(!!footerembed.value == true) {
     embed.setFooter(footerembed.value)
   }
   client.guilds.cache.find(sw => sw.name === selectsw.value).channels.cache.find(kanal => kanal.name === sunucuselect.value).send(embed)
@@ -135,5 +131,4 @@ client.on("message", (message) => {
           }
         }
 })
-
   client.login(config.token);
