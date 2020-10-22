@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa | Electron Bot Panel</title>
+    <title>Main Page | Electron Bot Panel</title>
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -16,28 +16,28 @@
     <button id="yenile">Refresh</button>
     <br>
     <div class="yaziclass">Message Send:</div>
-    <input type="text" placeholder="mesaj" id="testinp" required="true">
+    <input type="text" placeholder="message" id="testinp" required="true">
     <button id="test">Send</button>
     <br>
     <div class="yaziclass">Embed:</div> <input type="checkbox" id="checkbox" onclick="chckbx()">
-    <div class="test" id="divtest" style="display: none;">
-    <div class="yaziclass">Title:</div><input type="text" name="" id="title" placeholder="Title" style="display: none;">
-    <div class="yaziclass">Author:</div><input type="text" name="" id="author" placeholder="Author" style="display: none;"><input type="text" name="" id="author2" placeholder="Author2" style="display: none;">
-    <div class="yaziclass">Color:</div><input type="text" name="" id="color" placeholder="Color" style="display: none;">
-    <div class="yaziclass">Field:</div><input type="text" name="" id="field" placeholder="Field" style="display: none;"><input type="text" name="" id="field2" placeholder="Field2" style="display: none;">
-    <div class="yaziclass">Description:</div><input type="text" name="" id="desc" placeholder="Description" style="display: none;">
-    <div class="yaziclass">Image:</div><input type="text" name="" id="image" placeholder="Image" style="display: none;">
-    <div class="yaziclass">Thumbnail:</div><input type="text" name="" id="thumb" placeholder="Thumbnail" style="display: none;">
-    <div class="yaziclass">Footer:</div><input type="text" name="" id="footerembed" placeholder="Footer" style="display: none;">
-    <button id="embedsend" style="display: none;">Gönder</button>
-    </div>
+    <form id="embedform" style="display: none;">
+    <div class="yaziclass">Title:</div><input type="text" name="" id="title" placeholder="Title" >
+    <div class="yaziclass">Author:</div><input type="text" name="" id="author" placeholder="Author" ><input type="text" name="" id="author2" placeholder="Author2" >
+    <div class="yaziclass">Color:</div><input type="text" name="" id="color" placeholder="Color" >
+    <div class="yaziclass">Field:</div><input type="text" name="" id="field" placeholder="Field" ><input type="text" name="" id="field2" placeholder="Field2" >
+    <div class="yaziclass">Description:</div><input type="text" name="" id="desc" placeholder="Description" >
+    <div class="yaziclass">Image:</div><input type="text" name="" id="image" placeholder="Image" >
+    <div class="yaziclass">Thumbnail:</div><input type="text" name="" id="thumb" placeholder="Thumbnail" >
+    <div class="yaziclass">Footer:</div><input type="text" name="" id="footerembed" placeholder="Footer" >
+    <button id="embedsend" >Gönder</button>
+    </form>
     <br>
     <div class="yaziclass">Member:</div>
     <select id="sunucularüye" style="width: 140px; height: 20px;"></select>
     <button id="yenile2">Refresh</button>
     <br>
     <div class="yaziclass">Member Message Send:</div>
-    <input type="text" placeholder="mesaj" id="üyeyeinp" required="true">
+    <input type="text" placeholder="message" id="üyeyeinp" required="true">
     <button id="test2">Send</button>
     <br>
     <div class="yaziclass">Give Role:</div>
@@ -53,76 +53,11 @@
     <script>
         function chckbx() {
         var checkBox = document.getElementById("checkbox");
-        var title = document.getElementById("title");
-        var author = document.getElementById("author");
-        var author2 = document.getElementById("author2");
-        var field2 = document.getElementById("field2");
-        var color = document.getElementById("color");
-        var field = document.getElementById("field");
-        var desc = document.getElementById("desc");
-        var image = document.getElementById("image");
-        var thumb = document.getElementById("thumb");
-        var footerembed = document.getElementById("footerembed");
-        var embedsend = document.getElementById("embedsend");
-        if (checkBox.checked == true){
-            title.style.display = "block";
+        var embedform = document.getElementById("embedform")
+        if (checkBox.checked == true) {
+            embedform.style.display = "block"
         } else {
-            title.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            author.style.display = "block";
-        } else {
-            author.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            author2.style.display = "block";
-        } else {
-            author2.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            field2.style.display = "block";
-        } else {
-            field2.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            color.style.display = "block";
-        } else {
-            color.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            field.style.display = "block";
-        } else {
-            field.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            desc.style.display = "block";
-        } else {
-            desc.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            image.style.display = "block";
-        } else {
-            image.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            thumb.style.display = "block";
-        } else {
-            thumb.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            footerembed.style.display = "block";
-        } else {
-            footerembed.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            embedsend.style.display = "block";
-        } else {
-            embedsend.style.display = "none";
-        }
-        if (checkBox.checked == true){
-            document.getElementById("divtest").style.display = "block";
-        } else {
-            document.getElementById("divtest").style.display = "none";
+            embedform.style.display = "none"
         }
     }
     </script>
