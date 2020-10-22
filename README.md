@@ -1,5 +1,7 @@
 # Electron Discord Bot Panel
-  ![Discord Server](https://discordapp.com/api/guilds/543881846899867648/widget.png?style=shield)
+  <a href="https://discord.gg/kBcxMga">
+    <img src="https://discordapp.com/api/guilds/543881846899867648/widget.png?style=shield" alt="Discord Server">
+  </a>
 
 ## Installation
 Clone this repository
