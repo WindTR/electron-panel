@@ -1,0 +1,25 @@
+{
+  "name": "electronbot",
+  "version": "1.0.0",
+  "description": "Simple Discord Bot Control Panel made with Electron",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "https://github.com/WindTR",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.3.2",
+    "electron-packager": "^15.1.0"
+  },
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  },
+  "build": {
+    "extraResources": [
+        {
+            "filter": ["./config.json"]
+        }
+    ]
+}
+}
