@@ -43,13 +43,13 @@ app.on("ready", () => {
             label: "Dosya",
             submenu: [
                 {
-                    label: "Geliştirici Araçları",
+                    label: "DevTools",
                     click: async () => {
                         mainwindow.webContents.openDevTools()
                     }
                 },
                 {
-                    label: "Çıkış",
+                    label: "Exit",
                     click: async () => {
                         process.exit(0)
                     }
